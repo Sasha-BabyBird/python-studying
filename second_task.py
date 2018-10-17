@@ -6,12 +6,12 @@ with open("anaconda.txt", 'r+') as in_file:
     #list(set(...)) - для удаления повторений, sorted - для единообразия
     #print(words)
     years = sorted(re.findall(r'[12]\d{3}', line))
-    print(years)
+    #print(years)
 with open("words.txt", 'w') as out_file:
-    for i in range(1, len(words)):
+    for i in range(len(words)):
         out_file.write(words[i] + '\n')
 with open("years.txt", 'w') as out_file:
-    for i in range(1, len(years)):
+    for i in range(len(years)):
         out_file.write(years[i] + "\n")
 
  
