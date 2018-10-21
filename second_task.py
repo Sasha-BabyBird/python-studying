@@ -8,10 +8,8 @@ with open("anaconda.txt", 'r+') as in_file:
     years = sorted(re.findall(r'[12]\d{3}', line))
     #print(years)
 with open("words.txt", 'w') as out_file:
-    for i in range(len(words)):
-        out_file.write(words[i] + '\n')
+    for word in words:
+        out_file.write(word + '\n')
 with open("years.txt", 'w') as out_file:
-    for i in range(len(years)):
-        out_file.write(years[i] + "\n")
-
- 
+    for year in years:
+        out_file.write(year + "\n")
