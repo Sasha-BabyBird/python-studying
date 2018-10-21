@@ -17,8 +17,8 @@ ln = len(dt)
 хранились в разных ячейках.
 '''
 datestring = ''
-for i in range(ln):
-    datestring += dt[i] + ','
+for date in dt:
+    datestring += date + ','
 dt = re.split(r'[.,]', datestring)
 #print(dt)
 '''
@@ -40,8 +40,8 @@ del dt[ln:]
 indeces = re.findall(r'(?<=, )\d+', str(sorted(dt)))
 #print(indeces)
 with open ('SortedNews.txt', 'w', encoding='utf-8') as out_file:
-    for i in range(ln):
-        out_file.write(news[int(indeces[i])])
+    for ind in indeces:
+        out_file.write(news[int(ind)])
 
 
 
