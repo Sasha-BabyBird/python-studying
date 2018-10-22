@@ -31,10 +31,9 @@ for i in range(len(wordlist) - 1):
     '''
     if wordlist[i] in formlist:
         phrases.append(wordlist[i] + ' ' + wordlist[i+1])
-#phrases = re.findall(r'\b[А-Яа-яЁёA-Za-z-]+\s[А-Яа-яЁёA-Za-z-]+', str(phrases))
+phrases = re.findall(r'\b[А-Яа-яЁёA-Za-z-]+\s[А-Яа-яЁёA-Za-z-]+', str(phrases))
 phrases_counter = sorted(cl.Counter(phrases).items())
 #print(phrases_counter)
 with open('phrases.txt', 'w', encoding='utf-8') as out_file:
     for i in range(len(phrases_counter)):
         out_file.write(str(phrases_counter[i]) + '\n')
-
