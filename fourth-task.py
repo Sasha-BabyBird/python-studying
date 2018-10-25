@@ -38,7 +38,7 @@ while i < len(wordlist):
 result = list(dict(cl.Counter(wordlist).most_common(30)))
 with open('most_common_words.txt', 'w', encoding='utf-8') as out_file:
     for word in result:
-        out_file.write(word + '\n')
+        out_file.write(f'{word}\n')
 
 
 

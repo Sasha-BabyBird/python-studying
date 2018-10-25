@@ -36,4 +36,4 @@ phrases_counter = sorted(cl.Counter(phrases).items())
 #print(phrases_counter)
 with open('phrases.txt', 'w', encoding='utf-8') as out_file:
     for i in range(len(phrases_counter)):
-        out_file.write(str(phrases_counter[i]) + '\n')
+        out_file.write(f'{str(phrases_counter[i])}\n')

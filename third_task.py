@@ -37,10 +37,10 @@ del dt[ln:]
 в процессе сортировки,
 и выводим новости в нужном порядке.
 '''
-indeces = re.findall(r'(?<=, )\d+', str(sorted(dt)))
-#print(indeces)
+indices = re.findall(r'(?<=, )\d+', str(sorted(dt)))
+#print(indices)
 with open ('SortedNews.txt', 'w', encoding='utf-8') as out_file:
-    for ind in indeces:
+    for ind in indices:
         out_file.write(news[int(ind)])
 
 

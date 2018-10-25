@@ -9,7 +9,7 @@ with open("anaconda.txt", 'r+') as in_file:
     #print(years)
 with open("words.txt", 'w') as out_file:
     for word in words:
-        out_file.write(word + '\n')
+        out_file.write(f'{word}\n')
 with open("years.txt", 'w') as out_file:
     for year in years:
-        out_file.write(year + "\n")
+        out_file.write(f'{year}\n')
