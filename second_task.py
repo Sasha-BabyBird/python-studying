@@ -1,7 +1,7 @@
 import re
 with open("anaconda.txt", 'r+') as in_file:
     line = in_file.read()
-    words = sorted(list(set(re.findall(r'\b[a-zA-z]+', re.sub('II', '2', line)))))
+    words = sorted(list(set(re.findall(r'\b[a-zA-Z]+', re.sub('II', '2', line)))))
     #чтобы не учитывать "II" и "III" в списке слов
     #list(set(...)) - для удаления повторений, sorted - для единообразия
     #print(words)
